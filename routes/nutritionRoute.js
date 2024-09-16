@@ -3,7 +3,7 @@ const Nutrition=require('../models/Nutrition')
 const nutritionRoute = express.Router();
 
 
-nutritionRoute.get('/api/nutrition', async (req, res) => {
+nutritionRoute.get('/getallnutrition', async (req, res) => {
     const entries = await Nutrition.find();
     res.json(entries);
 });
