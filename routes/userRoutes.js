@@ -13,8 +13,8 @@ const userRouter = express.Router();
 userRouter.post('/', userController.register);
 userRouter.post('/login', userController.login);
 userRouter.post('/nutrition', userController.Nutrition);
-userRouter.post('/goal', userController.Goals);
-userRouter.post('/sleepPattern', userController.sleepPatterns);
+userRouter.post('/goals', userController.Goals);
+userRouter.post('/sleep', userController.sleepPatterns);
 
 // authenticated route
 userRouter.get('/me', auth.isAuth, userController.me);

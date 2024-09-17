@@ -1,8 +1,8 @@
 const express = require('express');
-const Goal=require('../models/Goals')
+const Goal = require('../models/Goals')
 const goalRoute = express.Router();
 
-goalRoute.get('/getgoals', async (req, res) => {
+goalRoute.get('/getallgoals', async (req, res) => {
     const goals = await Goal.find();
     res.json(goals);
 });

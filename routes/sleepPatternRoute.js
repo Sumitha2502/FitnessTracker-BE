@@ -1,14 +1,14 @@
 const express = require('express');
-const sleepPatterns=require('../models/Goals')
+const Sleep = require('../models/sleepPatterns')
 const sleepPatternRoute = express.Router();
 
-sleepPatternRoute.get('/api/sleep', async (req, res) => {
+sleepPatternRoute.get('/getallsleep', async (req, res) => {
     const entries = await Sleep.find();
     res.json(entries);
 });
 
 sleepPatternRoute.post('/api/sleep', async (req, res) => {
-    const newEntry = new sleepPatterns(req.body);
+    const newEntry = new Sleep(req.body);
     await newEntry.save();
     res.json(newEntry);
 });

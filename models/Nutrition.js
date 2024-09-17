@@ -2,10 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-
-
-
-
 const nutritionSchema = new mongoose.Schema({
     date: String,
     calories: Number,

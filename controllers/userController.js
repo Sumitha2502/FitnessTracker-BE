@@ -2,7 +2,7 @@
 const User = require('../models/user');
 // import the bcrypt library
 const bcrypt = require('bcrypt');
-require("dotenv").config() ; //Load Env variable
+require("dotenv").config(); //Load Env variable
 
 
 // import the jsonwebtoken library

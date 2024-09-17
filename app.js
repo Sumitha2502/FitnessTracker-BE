@@ -23,7 +23,7 @@ const morgan = require('morgan');
 // use the cors middleware
 app.use(cors({
     //https://splendid-sable-ded7c2.netlify.app
-    origin: 'https://splendid-sable-ded7c2.netlify.app',
+    origin: ['https://splendid-sable-ded7c2.netlify.app', 'http://localhost:5173'],
     credentials: true
 }));
 
@@ -45,9 +45,9 @@ app.head('/api', (req, res) => {
 
 // define the endpoints
 app.use('/api/users', userRouter);
-app.use('/api/goal', goalRoute);
+app.use('/api/goals', goalRoute);
 app.use('/api/nutrition', nutritionRoute);
-app.use('/api/goal', sleepPatternRoute);
+app.use('/api/sleep', sleepPatternRoute);
 
 //Server listening
 app.listen(3004, async () => {
